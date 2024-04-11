@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: wil-service
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - port: 8888
       targetPort: 8888
+      nodePort: 30000
   selector:
     app: wil-pod
